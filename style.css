@@ -1,0 +1,162 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+nav{
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    position: fixed;
+    background: white;
+    z-index: 1;
+    min-width: 100%;
+}
+
+nav li{
+    list-style: none;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+nav li:hover{
+    border-bottom: 4px solid rgb(17, 22, 53);
+}
+
+
+
+nav ul{
+    display: flex;
+    gap:20px;
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+}
+
+#home{
+    position:relative;
+    background-image: url(pic1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    background-attachment: fixed;
+}
+
+.text{
+    
+    font-size: 40px;
+    text-align: center;
+    top: 50%;
+    width: 100%; 
+    position: absolute;
+    font-family: 'Ysabeau', sans-serif;
+    color: white;
+}
+
+
+
+.textbg{
+
+    background-color: rgb(38, 74, 58);
+   padding: 10px;
+   letter-spacing: 2px;
+}
+
+#about{
+    margin:30px 30px 60px 30px;
+    text-align: center;
+    padding: 100px 30px 30px 30px;
+
+    /* min-height: 100%; */
+    position:relative;
+
+}
+
+#about::before {
+    content: "";
+    background-image: url(LOGO-removebg-preview.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-size: 500px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.35;
+}
+
+
+
+
+#about h1{
+    font-size: 50px;
+    font-family: 'Ysabeau', sans-serif;
+
+}
+
+#about p{
+    letter-spacing: 2px;
+    margin-top: 20px;
+    color: rgb(57, 57, 110);
+}
+
+#issues{
+    /* text-align: center; */
+    /* margin: 0 30px; */
+    background-image: url(pic4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    background-attachment: fixed;
+
+}
+
+#issues li{
+    list-style: none;
+}
+.text1{
+    font-size: 40px;
+    text-align: center;
+    padding-top: 200px;
+    /* top: 190%; */
+    /* width: 100%; */
+    /* position: absolute;*/
+    font-family: 'Ysabeau', sans-serif;}
+
+
+.textbg1{
+    background-color: rgb(2, 1, 1);
+    padding:10px;
+    color: aliceblue;
+}
+
+.issues1{
+    background-color: white;
+    margin: 100px auto;
+    max-width: 600px;
+    font-size:20px;
+    letter-spacing: 3px;
+}
+
+.issues1 h1:hover{
+
+    border-bottom: 4px solid rgb(24, 23, 61);
+    border-top: 4px solid rgb(24, 14, 54);
+}
+
