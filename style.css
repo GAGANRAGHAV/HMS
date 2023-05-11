@@ -15,7 +15,7 @@ nav{
     
     justify-content: space-between;
     align-items: center;
-    padding: 0px 40px;
+    padding: 0px 40px 0 0px;
     position: fixed;
     background: white;
     z-index: 1;
@@ -25,17 +25,20 @@ nav{
 nav li{
     list-style: none;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 26px;
+    padding: 10px;
     
 }
 
 nav li:hover{
-    border-bottom: 4px solid rgb(17, 22, 53);
+    /* border-bottom: 4px solid rgb(17, 22, 53); */
+    text-decoration:underline 3px;
 }
 
 .btnlogin{
-    width:130px;
-    height: 50px;
+    /* width:130px;
+    height: 50px; */
+    padding:5px 15px;
     background-color: rgb(54, 79, 67);
     border: 2px solid black;
     outline: none;
@@ -59,7 +62,8 @@ nav li:hover{
 nav ul{
     display: flex;
     gap:20px;
-    justify-content: end;
+    justify-content:center;
+    
 }
 
 li a{
@@ -100,11 +104,15 @@ li a{
 #about{
     margin:30px 30px 60px 30px;
     text-align: center;
-    padding: 100px 30px 30px 30px;
+    padding: 100px 30px 100px 30px;
 
     /* min-height: 100%; */
     position:relative;
 
+}
+#about h1
+{
+    margin:auto 0;
 }
 
 #about::before {
@@ -112,7 +120,7 @@ li a{
     background-image: url(LOGO-removebg-preview.png);
     background-position: center;
     background-repeat: no-repeat;
-    /* background-size: cover; */
+    background-size: cover;
     background-size: 500px;
     position: absolute;
     top: 0px;
@@ -205,6 +213,11 @@ li a{
 
     /* min-height: 100%; */
     position:relative;
+    background-image: url(LOGO-removebg-preview-safeimagekit.png);
+    background-position:center ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 500px;
 }
 
 
@@ -236,10 +249,12 @@ transition: .5s ease-in-out;
 
     
 }
+
 .btn2:hover{
-    transition: .5s ease-in-out;
+    transition: .3s ease-in-out;
     transform: scale(1.1);
 }
+
 .complaintcontainer a {
     text-decoration: none;
    
@@ -248,12 +263,12 @@ transition: .5s ease-in-out;
 
 
 
-#complaint::before {
+/* #complaint::before {
     content: "";
     background-image: url(LOGO-removebg-preview.png);
     background-position: center;
     background-repeat: no-repeat;
-    /* background-size: cover; */
+    background-size: cover;
     background-size: 500px;
     position: absolute;
     top: 0px;
@@ -264,4 +279,42 @@ transition: .5s ease-in-out;
     justify-content: center;
     align-items: center;
     display: flex;
+} */
+
+footer{
+
+    display: flex;
+    justify-content: space-between;
+    background-color: brown;
+    color: white;
+    align-items: center;
+    padding: 5px 20px;
 }
+
+footer li {
+
+    list-style: none;
+
+}
+
+.icon_container{
+    /* display: flex; */
+    gap:10px;
+    font-size: 32px;
+    /* justify-content: center; */
+
+}
+
+.icon_container .icon i:hover{
+    transform: scale(1.2);
+    box-shadow: 3px 4px 5px black;
+}
+
+footer h2{
+
+    color: rgb(177, 167, 167);
+    font-weight: 600;
+}
+
+
+
