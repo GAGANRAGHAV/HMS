@@ -21,7 +21,18 @@ nav{
     z-index: 1;
     min-width: 100%;
 }
+#nav-toggle
+{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    font-size:xx-large;
 
+}
+a, button
+{
+    cursor: pointer;
+}
 nav li{
     list-style: none;
     font-weight: bold;
@@ -157,7 +168,7 @@ li a{
 
 }
 
-#issues li{
+#issues li ,a{
     list-style: none;
 }
 .text1{
@@ -285,7 +296,7 @@ footer{
 
     display: flex;
     justify-content: space-between;
-    background-color: brown;
+    background-color: rgb(107, 98, 113);
     color: white;
     align-items: center;
     padding: 5px 20px;
@@ -316,5 +327,48 @@ footer h2{
     font-weight: 600;
 }
 
+@media (min-width:910px)
+{
+  #nav-toggle{
+    display: none;
 
 
+    
+  }
+
+ 
+}
+
+
+@media (max-width:910px)
+{
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btnlogin{
+    display: none;
+  }
+
+  nav {
+    display:unset ;
+  }
+
+
+  #links{
+    display: none;
+  }
+  
+  .width{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+
+
+
+}
