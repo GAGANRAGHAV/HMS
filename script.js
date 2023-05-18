@@ -16,6 +16,7 @@ var c=0
 document.getElementById("nav-toggle").addEventListener("click", display);
 
 function display() {
+ 
   if(c%2==0)
   document.getElementById("links").style.display ="unset";
 
@@ -23,6 +24,43 @@ function display() {
   document.getElementById("links").style.display ="none";
 
   c++
+    }
+
+  
+
+const containerE1 = document.querySelector(".text");
+
+let charindex = 0;
+
+const xyz=" HOSTEL MANAGEMENT SYSTEM";
+
+updatetext();
+
+function updatetext()
+{
+  charindex++;
+
+containerE1.innerHTML=  xyz.slice(0,charindex)
+console.log(containerE1);
+
+
+if(charindex === xyz.length)
+{
+  charindex =0;
+}
+
+
+setTimeout(updatetext , 200);
+
+}
+
+
+// updateText();
+
+// function update()
+// {
+//   containerE1.innerHTML = `i am a dev`
+// }
   // if(document.getElementById("links").style.display ="unset")
   // {
   //   document.getElementById("links").style.display ="none";
@@ -31,5 +69,5 @@ function display() {
   //   document.getElementById("links").style.remove.display ="unset";
   // }
 
-}
+
 
