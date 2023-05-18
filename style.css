@@ -7,6 +7,7 @@
 html,body{
     height: 100%;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 
@@ -94,23 +95,24 @@ li a{
 
 .text{
     
-    font-size: 40px;
+    font-size: 60px;
     text-align: center;
     top: 50%;
     width: 100%; 
     position: absolute;
     font-family: 'Ysabeau', sans-serif;
     color: white;
+    font-weight: bold;
 }
 
 
-
+/* 
 .textbg{
 
-    background-color: rgb(38, 74, 58);
+    background-color: transparent;
    padding: 10px;
    letter-spacing: 2px;
-}
+} */
 
 #about{
     margin:30px 30px 60px 30px;
