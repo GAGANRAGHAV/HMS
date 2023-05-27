@@ -24,30 +24,30 @@ rel="stylesheet">
 
     <h2>REGISTER COMPLAINT</h2>
 
-    <form action="#">
+    <form name="submit-to-google-sheet">
 
 
         <div class="formcntr">
 
         <div class="formctrl">
         <label>FIRST NAME</label>
-        <input type="name">
+        <input type="name" name="NAME" >
         </div>
 
-         <div class="formctrl">
+         <!-- <div class="formctrl">
         <label>LAST NAME</label>
         <input type="name">
-        </div>
+        </div> -->
 
   <div class="formctrl">
         <label>COLLEGE EMAIL ID</label>
-        <input type="email">
+        <input type="email" name="ID" required>
         </div>
 
         
         
         
-        <div class="formctrl">
+        <!-- <div class="formctrl">
             <label>HOSTEL</label>
             <select>
                 <option>SELECT YOUR HOSTEL</option>
@@ -58,26 +58,26 @@ rel="stylesheet">
                 
                 
             </select>
-        </div>
+        </div> -->
 
         
         <div class="formctrl">
             <label>ROOM NO.</label>
-            <input type="number">
+            <input type="number"  name="ROOM" required>
             </div>
 
             <div class="formctrl">
                 <label>FLANK</label>
-                <input type="name">
+                <input type="name" name="FLANK">
                 </div>
                 
                 
             <div class="formctrl">
                 <label>DESCRIBE YOUR ISSUE</label>
-                <textarea  placeholder="" rows="5" cols="50"></textarea>
+                <textarea name="ISSUE" placeholder="" rows="5" cols="50"></textarea>
                 </div>
 
-
+<!-- 
                 <div class="formctrl">
                     <label>SEND YOUR COMPLAINT TO:</label>
                     <select>
@@ -88,8 +88,8 @@ rel="stylesheet">
                        
                         
                         
-                    </select>
-                    </div>
+                    </select> -->
+                    <!-- </div> -->
 
                
                     
@@ -101,7 +101,7 @@ rel="stylesheet">
                 
                 
                <div class="btncntr">
-                <button class="btn">
+                <button type="submit" class="btn">
                     SEND
                 </button>
             </div> 
@@ -112,6 +112,26 @@ rel="stylesheet">
 </div>
 
 </div>
+
+<script>
+    
+    const scriptURL = '<https://script.google.com/macros/s/AKfycbztwNrHEaGuieqvyv8jDijDlPiH17S8mse1MEvhCrOkxnJ8S8kz-7oFp5TS65eUCajS/exec>'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
+  <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+
+
 
 </body>
 </html>

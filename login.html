@@ -13,12 +13,12 @@
   <div class="wrapper">
     <div class="formbox">
       <h2>LOGIN</h2>
-      <form action="#">
+      <form action="#" onsubmit="sendEmail(); reset(); return false;">
         <div class="inputbox">
           <span class="icon">
 
           </span>
-          <input type="email" required>
+          <input type="email" id="email" required>
           <label>Email</label>
         </div>
 
@@ -51,6 +51,26 @@
 
       </form>
     </div>
-  </div>                                    
+  </div> 
+  
+  <script src="http://smtpjs.com/v3/smtp.js"></script>
+
+  <script>
+
+    function sendEmail(){
+      Email.send({
+        Host : "smtp.gmail.com",
+        Username : "gaganraghav143@gmail.com",
+        Password : "gagAN@143",
+        To : 'gagan.innerve@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "This is the subject",
+        Body : "And this is the body"
+    }).then(
+      message => alert(message)
+    );
+    }
+
+  </script>
 </body>
 </html>
