@@ -7,6 +7,7 @@
 :root{
     --primary-color: #ffffff;
     --secondary-color:#212121;
+    --transition: .5s ease-in-out;
 
    
 }
@@ -268,20 +269,24 @@ li a{
 
 .btn2{
 background-color:var(--secondary-color);
+border:3px solid var(--primary-color);
+border-radius:10px;
 height: 70px;
 width: 300px;
 color: var(--primary-color);
 font-family: 'Ysabeau', sans-serif;
 font-size: 25px;
 font-weight: 700;
-transition: .5s ease-in-out;
+transition: var(--transition);
+
 
     
 }
 
 .btn2:hover{
-    transition: .3s ease-in-out;
-    transform: scale(1.1);
+    border:3px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    color:var(--secondary-color);
 }
 
 .complaintcontainer a {
